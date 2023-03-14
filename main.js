@@ -3,19 +3,19 @@ async function fetchAPIData() {
     .then((res) => res.json())
     .then((data) => (console.log(data.products), showProduct(data.products)));
 }
-//onst IMG_URL = "https://image.tmdb.org/t/p/w500 ";
+
 const global = {
   curentPage: window.location.pathname,
 };
-fetchAPIData();
+//fetchAPIData();
 function init() {
   switch (global.curentPage) {
     case "/":
     case "/index.html":
       fetchAPIData();
       break;
-    case "/user.html":
-      console.log("User");
+    case "/product.html":
+      console.log("Product");
       break;
   }
 }
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", init);
 
 async function showProduct(data) {
   data.forEach((product) => {
-    const { title, profile_path, overview, id } = product;
     const div = document.createElement("div");
     div.classList.add("card");
     div.innerHTML = `
