@@ -3,6 +3,16 @@ async function fetchAPIData() {
     .then((res) => res.json())
     .then((data) => (console.log(data.products), showProduct(data.products)));
 }
+const productId = window.location.search.split("=")[1];
+
+async function APIData() {
+  fetch("https://dummyjson.com/products/" + productId)
+    .then((res) => res.json())
+
+    .then((data) => {
+      console.log(data), productDetail(data);
+    });
+}
 
 const global = {
   curentPage: window.location.pathname,
@@ -15,7 +25,7 @@ function init() {
       fetchAPIData();
       break;
     case "/product.html":
-      console.log("Product");
+      APIData();
       break;
   }
 }
@@ -41,4 +51,27 @@ async function showProduct(data) {
 
     document.querySelector("#popular-product").appendChild(div);
   });
+}
+async function productDetail(product) {
+  const productId = window.location.search.split("=")[1];
+
+  const div = document.createElement("div");
+  div.innerHTML = `<div class="details-top">
+          <div>
+            <img src="${product.thumbnail}" />
+          </div>
+          <div>
+            <h2>${product.description}</h2>
+            <p>
+              <i class="fas fa-star text-primary"></i>
+              ${product.title}
+            </p>
+            
+            <p>
+              ${product.category}
+            </p>
+
+           
+          </div>`;
+  document.querySelector("#product-details").appendChild(div);
 }
