@@ -95,14 +95,12 @@ async function wiperSlider(data) {
       <a href="product.html?id=${swiper.id}"">
         <img src=" ${swiper.thumbnail}" alt="${swiper.title}" />
       </a>
-      <h4 class="swiper-rating">
-        <i class="fas fa-star text-secondary"></i> ${swiper.id} / 10
-      </h4>
+      <p>${swiper.title}</p>
+       
+  
     `;
 
     document.querySelector(".swiper-wrapper").appendChild(div);
-
-    initSwiper();
   });
 }
 
@@ -129,3 +127,4 @@ function initSwiper() {
     },
   });
 }
+initSwiper();
