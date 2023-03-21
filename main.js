@@ -95,7 +95,8 @@ async function wiperSlider(data) {
       <a href="product.html?id=${swiper.id}"">
         <img src=" ${swiper.thumbnail}" alt="${swiper.title}" />
       </a>
-      <p>${swiper.title}</p>
+      <p>${swiper.description}</p>
+      <h3>${swiper.title}</h3>
        
   
     `;
