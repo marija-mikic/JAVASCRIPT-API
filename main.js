@@ -8,7 +8,19 @@ async function fetchAPIData() {
         wiperSlider(data.products)
       )
     );
+
+  let itemPerPage = 10;
+  let curentPage = 1;
+
+  const pages = [];
+  for (let i = 0; i < Math.ceil(fetchAPIData.length / itemPerPage); i++) {
+    pages.push(i);
+  }
+  const indexOfLastPage = curentPage * itemPerPage;
+  const indexOfFirstPage = indexOfLastPage - itemPerPage;
+  const curentItem = pages.slice(indexOfFirstPage, indexOfLastPage);
 }
+
 const productId = window.location.search.split("=")[1];
 
 async function APIData() {
@@ -59,6 +71,7 @@ async function showProduct(data) {
     document.querySelector("#popular-product").appendChild(div);
   });
 }
+
 async function productDetail(product) {
   const productId = window.location.search.split("=")[1];
 
