@@ -7,20 +7,20 @@
 }
 
 :root {
-  --color-primary: #772a8a;
+  --color-primary: #52748f;
   --color-secondary: #f1c40f;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background: var(--color-primary);
+  background-image: url(https://1.bp.blogspot.com/-7tog-t849Uo/XLceUW1r8bI/AAAAAAAAHz4/MxcbXSjZsoYRl0-yEFygyteQszvfOTgrQCLcBGAs/s1600/2019-04-17-14-37-02.jpg);
   color: #fff;
   overflow-x: hidden;
 }
 
 a {
-  color: #665fa8;
+  color: #534e81;
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ ul {
 }
 
 .text-secondary {
-  color: var(--color-secondary);
+  color: #052b50;
 }
 
 .active {
@@ -78,7 +78,7 @@ ul {
   padding: 0 20px;
 }
 
-.main-header .container {
+.main-header container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,8 +122,12 @@ ul {
 
 /* Card */
 .card {
-  background: #3cb990;
+  background: #c3ceca;
   padding: 5px;
+}
+.card h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #052b50;
 }
 
 .card img {
@@ -143,7 +147,7 @@ ul {
 
 /* Footer */
 .main-footer {
-  background: #020d18;
+  background: #052b50;
   padding: 20px 0;
   margin-top: 20px;
 }
@@ -155,7 +159,7 @@ ul {
 }
 
 .main-footer .container .logo {
-  color: #fff;
+  color: #884646;
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
@@ -208,7 +212,6 @@ section h2 {
   padding: 10px;
 }
 
-/* Movie & Show Details */
 .details-top {
   display: flex;
   justify-content: space-between;
@@ -234,6 +237,12 @@ section h2 {
 
 .details-top p {
   margin: 20px 0;
+  color: #020508;
+}
+
+.details-top h2 {
+  margin: 20px 0;
+  color: #020508;
 }
 
 .details-top .btn {
@@ -253,22 +262,6 @@ section h2 {
   margin-bottom: 40px;
 }
 
-.search .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.search .container h2 {
-  margin-bottom: 20px;
-}
-
-.search .container form {
-  width: 100%;
-  max-width: 600px;
-}
-
 .search-radio label {
   margin-right: 15px;
 }
@@ -278,43 +271,6 @@ section h2 {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-}
-
-.search .container form input[type="text"] {
-  flex: 6;
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background: transparent;
-  color: #fff;
-}
-
-.search .container form input[type="text"]::placeholder {
-  color: #fff;
-}
-
-.search .container form input[type="text"]:focus {
-  outline: none;
-}
-
-.search .container form button {
-  flex: 1;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  height: 50px;
-  cursor: pointer;
-  background: var(--color-secondary);
-  color: #000;
-}
-
-.search .container form button:hover {
-  background: transparent;
-  color: #fff;
 }
 
 .pagination {
