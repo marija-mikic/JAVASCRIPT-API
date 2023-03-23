@@ -38,7 +38,7 @@ async function productDetail(product) {
   const div = document.createElement("div");
   div.innerHTML = `<div class="details-top">
           <div>
-            <img src="${product.images[2]}" />
+            <img src="${product.images}" />
           </div>
           <div>
             <h2>${product.description}</h2>
